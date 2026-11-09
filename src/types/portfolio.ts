@@ -1,9 +1,10 @@
-export type ProjectCategory = 
+export type ProjectCategory =
   | 'All'
-  | 'Full-Stack' 
-  | 'AI & Machine Learning' 
-  | 'Cloud & Systems' 
-  | 'Mobile & Cross-Platform';
+  | 'Full-Stack'
+  | 'AI & Machine Learning'
+  | 'Cloud & Systems'
+  | 'Mobile & Cross-Platform'
+  | 'Web_Development';
 
 export interface ProjectImage {
   url: string;
@@ -25,7 +26,7 @@ export interface Project {
   thumbnail: string;
   videoUrl?: string;
   images: ProjectImage[];
-  
+
   // Case Study Sections
   overview: string;
   problemAndObjectives: string;
@@ -33,7 +34,7 @@ export interface Project {
   technologies: string[];
   implementationProcess: ImplementationPhase[];
   resultsAndImpact: string[];
-  
+
   // External Links
   githubUrl?: string;
   liveDemoUrl?: string;
@@ -41,7 +42,7 @@ export interface Project {
 
 export interface SkillItem {
   name: string;
-  level?: 'Proficient' | 'Advanced' | 'Intermediate' | 'Familiar';
+  level?: 'Proficient' | 'Advanced' | 'Intermediate' | 'Currently-Learning';
   icon?: string;
 }
 
