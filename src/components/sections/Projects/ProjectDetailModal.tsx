@@ -1,5 +1,17 @@
+
 import React, { useRef, useEffect } from 'react';
-import { ExternalLink, Github, CheckCircle2, Target, Wrench, GitFork, Sparkles, Play, Video } from 'lucide-react';
+import {
+  ExternalLink,
+  Github,
+  CheckCircle2,
+  Target,
+  Wrench,
+  GitFork,
+  Sparkles,
+  Play,
+  Video,
+  Download,
+} from 'lucide-react';
 import { Project } from '../../../types/portfolio';
 import { Modal } from '../../ui/Modal';
 import { Button } from '../../ui/Button';
@@ -20,7 +32,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoSectionRef = useRef<HTMLDivElement>(null);
 
-  // Pause video playback when modal is closed to prevent background audio
+  // Pause video playback when modal is closed
   useEffect(() => {
     if (!isOpen && videoRef.current) {
       videoRef.current.pause();
@@ -31,11 +43,15 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
   const handleWatchDemo = () => {
     if (videoSectionRef.current) {
-      videoSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      videoSectionRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
     }
+
     if (videoRef.current) {
       videoRef.current.play().catch(() => {
-        // Fallback if browser requires direct user gesture on video element
+        // Fallback if browser requires direct user gesture
       });
     }
   };
@@ -52,10 +68,12 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#E2DCea]">
           <div className="flex items-center gap-2">
             <Badge variant="blue">{project.category}</Badge>
-            {project.featured && <Badge variant="active">Featured Project</Badge>}
+            {project.featured && (
+              <Badge variant="active">Featured Project</Badge>
+            )}
           </div>
 
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2.5 flex-wrap">
             {project.videoUrl && (
               <Button
                 type="button"
@@ -68,6 +86,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 Watch Demo
               </Button>
             )}
+
             {project.githubUrl && (
               <Button
                 href={project.githubUrl}
@@ -80,6 +99,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 Source Code
               </Button>
             )}
+
             {project.liveDemoUrl && (
               <Button
                 href={project.liveDemoUrl}
@@ -92,10 +112,23 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 Live Demo
               </Button>
             )}
+
+            {project.downloadUrl && (
+              <Button
+                href={project.downloadUrl}
+                variant="secondary"
+                size="sm"
+                icon={Download}
+                iconPosition="left"
+                download
+              >
+                Download Excel
+              </Button>
+            )}
           </div>
         </div>
 
-        {/* Video Demonstration (if available) */}
+        {/* Video Demonstration */}
         {project.videoUrl && (
           <div ref={videoSectionRef} className="space-y-3 pt-1">
             <div className="flex items-center justify-between">
@@ -107,6 +140,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 Video Walkthrough
               </span>
             </div>
+
             <div className="relative rounded-xl overflow-hidden border border-[#E2DCea] bg-[#1E1A29] shadow-md">
               <video
                 ref={videoRef}
@@ -120,8 +154,10 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 Your browser does not support HTML5 video playback.
               </video>
             </div>
+
             <p className="text-xs sm:text-sm text-[#655E75] text-center italic px-2">
-              Demonstration video showcasing interface interaction, analysis flow, and recommendations.
+              Demonstration video showcasing interface interaction, analysis
+              flow, and recommendations.
             </p>
           </div>
         )}
@@ -133,7 +169,10 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               <Sparkles className="w-4 h-4" />
               Project Visuals
             </h3>
-            <ImageGallery images={project.images} projectTitle={project.title} />
+            <ImageGallery
+              images={project.images}
+              projectTitle={project.title}
+            />
           </div>
         )}
 

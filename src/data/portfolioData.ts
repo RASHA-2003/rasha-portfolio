@@ -1,3 +1,4 @@
+
 import { PortfolioData } from '../types/portfolio';
 
 /**
@@ -12,15 +13,17 @@ export const portfolioData: PortfolioData = {
   profile: {
     name: 'Rasha',
     roleTitle: 'Computer Science Graduate',
-    headline: 'Interested in web development, front-end development, database management, and data analysis. Building user-friendly web experiences and practical software solutions.',
-    bioSummary: 'Computer Science graduate from Taibah University with practical project experience in web development, front-end design, database management, and data analysis.',
+    headline:
+      'Interested in web development, front-end development, database management, and data analysis. Building user-friendly web experiences and practical software solutions.',
+    bioSummary:
+      'Computer Science graduate from Taibah University with practical project experience in web development, front-end design, database management, and data analysis.',
     location: 'Madinah, Saudi Arabia',
     availableForHire: true,
     availabilityStatus: 'Open to Technology & Software Opportunities',
     resumeUrl: '/Rasha%20Al-Thibyani%20Resume.pdf',
     email: 'rashajj2003@gmail.com',
     githubUrl: 'https://github.com/RASHA-2003',
-    linkedinUrl: 'https://linkedin.com/in/rasha-al-thibyani',
+    linkedinUrl: 'https://www.linkedin.com/in/rasha-althubyani-214759326',
     socials: [
       {
         platform: 'GitHub',
@@ -30,7 +33,7 @@ export const portfolioData: PortfolioData = {
       },
       {
         platform: 'LinkedIn',
-        username: 'rasha-al-thibyani',
+        username: 'rasha-althubyani-214759326',
         url: 'https://www.linkedin.com/in/rasha-althubyani-214759326',
         icon: 'linkedin',
       },
@@ -69,7 +72,8 @@ export const portfolioData: PortfolioData = {
     {
       id: 'web-dev',
       title: 'Web Development',
-      description: 'Technologies for designing and developing responsive, accessible interfaces',
+      description:
+        'Technologies for designing and developing responsive, accessible interfaces',
       skills: [
         { name: 'HTML5', level: 'Intermediate' },
         { name: 'CSS3', level: 'Intermediate' },
@@ -82,7 +86,8 @@ export const portfolioData: PortfolioData = {
     {
       id: 'programming',
       title: 'Programming Languages',
-      description: 'Programming languages used in academic coursework and project implementations',
+      description:
+        'Programming languages used in academic coursework and project implementations',
       skills: [
         { name: 'Python', level: 'Intermediate' },
         { name: 'Java', level: 'Intermediate' },
@@ -92,7 +97,8 @@ export const portfolioData: PortfolioData = {
     {
       id: 'database',
       title: 'Database Management',
-      description: 'Relational database design, SQL querying, and data organization',
+      description:
+        'Relational database design, SQL querying, and data organization',
       skills: [
         { name: 'SQL', level: 'Intermediate' },
         { name: 'SQL for Data Analysis', level: 'Intermediate' },
@@ -105,7 +111,8 @@ export const portfolioData: PortfolioData = {
     {
       id: 'data-analysis',
       title: 'Data Analysis',
-      description: 'Data collection, cleaning, organization, and exploratory analysis',
+      description:
+        'Data collection, cleaning, organization, and exploratory analysis',
       skills: [
         { name: 'Data Collection & Organization', level: 'Intermediate' },
         { name: 'Data Cleaning & Preprocessing', level: 'Intermediate' },
@@ -116,7 +123,8 @@ export const portfolioData: PortfolioData = {
     {
       id: 'tools',
       title: 'Tools & Technologies',
-      description: 'Development environments, version control, and development frameworks',
+      description:
+        'Development environments, version control, and development frameworks',
       skills: [
         { name: 'Git & GitHub', level: 'Intermediate' },
         { name: 'Flask (Python)', level: 'Intermediate' },
@@ -127,19 +135,20 @@ export const portfolioData: PortfolioData = {
     {
       id: 'learning',
       title: 'Currently Learning',
-      description: 'Tools and technologies I am currently developing skills in',
+      description:
+        'Tools and technologies I am currently developing skills in',
       skills: [
         { name: 'Power BI', level: 'Currently-Learning' },
       ],
     },
   ],
 
-
   projects: [
     {
       id: 'project-flory-skincare',
       title: 'Flory – AI-Powered Skincare Analysis Platform',
-      tagline: 'An Arabic AI-powered skincare platform designed to analyze skin conditions and provide personalized recommendations.',
+      tagline:
+        'An Arabic AI-powered skincare platform designed to analyze skin conditions and provide personalized recommendations.',
       category: 'AI & Machine Learning',
       featured: true,
       thumbnail: '/images/flory/cover.jpg',
@@ -147,7 +156,8 @@ export const portfolioData: PortfolioData = {
       images: [
         {
           url: '/images/flory/cover.jpg',
-          caption: 'Flory Platform – AI-powered skincare analysis interface and personalized product recommendations.',
+          caption:
+            'Flory Platform – AI-powered skincare analysis interface and personalized product recommendations.',
         },
       ],
       overview:
@@ -161,23 +171,37 @@ export const portfolioData: PortfolioData = {
         'Back-End Development: Contributed to back-end implementation using Python and Flask to connect frontend forms with database services.',
         'AI Support: Participated in data preparation and model training as a supporting contribution to the facial analysis CNN.',
       ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'SQL', 'Supabase', 'CNN', 'AI Assistant'],
+      technologies: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Python',
+        'Flask',
+        'SQL',
+        'Supabase',
+        'CNN',
+        'AI Assistant',
+      ],
       implementationProcess: [
         {
           phase: 'Phase 1: Front-End UI Design & Development (Independent)',
-          description: 'Independently designed and built the complete user interface using HTML, CSS, and JavaScript with Arabic language support.',
+          description:
+            'Independently designed and built the complete user interface using HTML, CSS, and JavaScript with Arabic language support.',
         },
         {
           phase: 'Phase 2: Database Design & Data Collection (Collaboration)',
-          description: 'Collaborated with a teammate on designing relational tables in Supabase and SQL, and gathering product and ingredient information.',
+          description:
+            'Collaborated with a teammate on designing relational tables in Supabase and SQL, and gathering product and ingredient information.',
         },
         {
           phase: 'Phase 3: Back-End API Contribution',
-          description: 'Contributed to Flask server endpoints handling data transmission between user forms and database records.',
+          description:
+            'Contributed to Flask server endpoints handling data transmission between user forms and database records.',
         },
         {
           phase: 'Phase 4: AI Data Preparation Support',
-          description: 'Participated in data preparation and supporting model training workflows for the convolutional neural network (CNN).',
+          description:
+            'Participated in data preparation and supporting model training workflows for the convolutional neural network (CNN).',
         },
       ],
       resultsAndImpact: [
@@ -192,26 +216,31 @@ export const portfolioData: PortfolioData = {
     {
       id: 'project-physicode-learning',
       title: 'PhysiCode – Interactive Physics Learning Website',
-      tagline: 'An interactive bilingual educational web platform designed to present physics concepts through engaging visual animations and simulations.',
+      tagline:
+        'An interactive bilingual educational web platform designed to present physics concepts through engaging visual animations and simulations.',
       category: 'Web_Development',
       featured: true,
       thumbnail: '/images/physicode/home.png',
       images: [
         {
           url: '/images/physicode/home.png',
-          caption: 'PhysiCode Homepage – Interactive solar system navigation hub and topic selection.',
+          caption:
+            'PhysiCode Homepage – Interactive solar system navigation hub and topic selection.',
         },
         {
           url: '/images/physicode/planet-1.png',
-          caption: 'Mechanics & Space Flight Simulation – Interactive physics topics and trajectory visualization.',
+          caption:
+            'Mechanics & Space Flight Simulation – Interactive physics topics and trajectory visualization.',
         },
         {
           url: '/images/physicode/planet-2.png',
-          caption: 'Gravity & Waves Simulation – Dynamic educational experiments with interactive parameter controls.',
+          caption:
+            'Gravity & Waves Simulation – Dynamic educational experiments with interactive parameter controls.',
         },
         {
           url: '/images/physicode/planet-3.png',
-          caption: 'Electromagnetism & Fluids – Educational simulation modules with bilingual descriptions.',
+          caption:
+            'Electromagnetism & Fluids – Educational simulation modules with bilingual descriptions.',
         },
       ],
       overview:
@@ -224,23 +253,33 @@ export const portfolioData: PortfolioData = {
         'Simulation Development: Implemented interactive physics simulation modules across mechanics, gravity, wave dynamics, electromagnetism, fluids, and modern physics.',
         'Bilingual Interface: Integrated Arabic and English language support, allowing users to toggle between languages seamlessly.',
       ],
-      technologies: ['HTML5', 'CSS3', 'JavaScript (Vanilla ES6)', 'HTML5 Canvas API', 'CSS Keyframe Animations'],
+      technologies: [
+        'HTML5',
+        'CSS3',
+        'JavaScript (Vanilla ES6)',
+        'HTML5 Canvas API',
+        'CSS Keyframe Animations',
+      ],
       implementationProcess: [
         {
           phase: 'Phase 1: Solar System Orbit Interface',
-          description: 'Designed a space-themed landing interface using CSS orbits and Canvas particles as the main navigation hub.',
+          description:
+            'Designed a space-themed landing interface using CSS orbits and Canvas particles as the main navigation hub.',
         },
         {
           phase: 'Phase 2: Physics Simulation Scripts',
-          description: 'Authored simulation logic in Vanilla JavaScript modeling projectile motion, wave mechanics, and gravitational fields.',
+          description:
+            'Authored simulation logic in Vanilla JavaScript modeling projectile motion, wave mechanics, and gravitational fields.',
         },
         {
           phase: 'Phase 3: Topic Pages & Educational Content',
-          description: 'Organized educational content across 6 dedicated topic pages with bilingual Arabic and English terminology.',
+          description:
+            'Organized educational content across 6 dedicated topic pages with bilingual Arabic and English terminology.',
         },
         {
           phase: 'Phase 4: Open Source Repository',
-          description: 'Refined responsive layout and published the codebase to GitHub as an open-source educational project.',
+          description:
+            'Refined responsive layout and published the codebase to GitHub as an open-source educational project.',
         },
       ],
       resultsAndImpact: [
@@ -251,6 +290,39 @@ export const portfolioData: PortfolioData = {
       ],
       githubUrl: 'https://github.com/RASHA-2003/physicode',
       liveDemoUrl: undefined,
+    },
+
+    {
+      id: 'project-data-analysis-excel',
+      title: 'Excel – Data Analysis Project',
+      tagline:
+        'A practical data analysis project using Microsoft Excel to organize, analyze, and visualize data.',
+      category: 'Data Analysis',
+      featured: false,
+      thumbnail: '/images/data-analysis.png',
+      images: [
+        {
+          url: '/images/data-analysis.png',
+          caption:
+            'Data Analysis Project – Excel analysis and data visualization.',
+        },
+      ],
+      overview:
+        'An Excel-based data analysis project demonstrating practical work with data organization, analysis, and visualization.',
+      problemAndObjectives:
+        'The project focuses on exploring and presenting data in a clear and structured way using Microsoft Excel.',
+      roleAndContributions: [
+        'Worked on the data analysis project using Microsoft Excel.',
+      ],
+      technologies: ['Microsoft Excel'],
+      implementationProcess: [],
+      resultsAndImpact: [
+        'Excel workbook available for review and download.',
+      ],
+      githubUrl: undefined,
+      liveDemoUrl: undefined,
+      downloadUrl:
+        '/files/Rasha_Althibyani_Data_Analysis_Portfolio.xlsx',
     },
   ],
 
@@ -265,9 +337,7 @@ export const portfolioData: PortfolioData = {
       location: 'Madinah, Saudi Arabia',
       period: 'Graduated June 2026',
       gpa: '4.53 / 5.00',
-      honors: [
-        'Second Class Honors',
-      ],
+      honors: ['Second Class Honors'],
       coursework: [
         'Data Structures & Algorithms',
         'Object-Oriented Programming (Java / C++)',

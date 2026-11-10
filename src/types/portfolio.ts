@@ -4,7 +4,8 @@ export type ProjectCategory =
   | 'AI & Machine Learning'
   | 'Cloud & Systems'
   | 'Mobile & Cross-Platform'
-  | 'Web_Development';
+  | 'Web_Development'
+  | 'Data Analysis';
 
 export interface ProjectImage {
   url: string;
@@ -38,6 +39,7 @@ export interface Project {
   // External Links
   githubUrl?: string;
   liveDemoUrl?: string;
+  downloadUrl?: string;
 }
 
 export interface SkillItem {
