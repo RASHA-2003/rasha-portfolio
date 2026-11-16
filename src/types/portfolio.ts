@@ -40,6 +40,7 @@ export interface Project {
   githubUrl?: string;
   liveDemoUrl?: string;
   downloadUrl?: string;
+  sqlFileUrl?: string;
 }
 
 export interface SkillItem {

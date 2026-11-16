@@ -97,7 +97,7 @@ export const Navbar: React.FC<NavbarProps> = ({ name, resumeUrl }) => {
               size="sm"
               icon={FileDown}
               iconPosition="left"
-              download="Resume.pdf"
+              download="Rasha Al-Thibyani Resume.pdf"
             >
               Resume
             </Button>
@@ -108,7 +108,7 @@ export const Navbar: React.FC<NavbarProps> = ({ name, resumeUrl }) => {
             <a
               href={resumeUrl}
               target="_blank"
-              download="Resume.pdf"
+              download="Rasha Al-Thibyani Resume.pdf"
               aria-label="Download Resume"
               className="p-2 text-[#8C79A8] border border-[#C9B9D9] rounded-lg hover:bg-[#EAE5EF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8C79A8]"
             >
@@ -157,7 +157,7 @@ export const Navbar: React.FC<NavbarProps> = ({ name, resumeUrl }) => {
                 size="md"
                 className="w-full"
                 icon={FileDown}
-                download="Resume.pdf"
+                download="Rasha Al-Thibyani Resume.pdf"
                 onClick={handleNavClick}
               >
                 Download Resume

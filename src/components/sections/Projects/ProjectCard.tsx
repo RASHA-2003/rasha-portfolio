@@ -1,5 +1,13 @@
 import React from 'react';
-import { ExternalLink, Github, ArrowRight, Layers, Play } from 'lucide-react';
+import {
+  ExternalLink,
+  Github,
+  ArrowRight,
+  Layers,
+  Play,
+  FileCode,
+  Download,
+} from 'lucide-react';
 import { Project } from '../../../types/portfolio';
 import { Card } from '../../ui/Card';
 import { Badge } from '../../ui/Badge';
@@ -109,7 +117,32 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
             Case Study
           </Button>
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            {project.downloadUrl && (
+              <a
+                href={project.downloadUrl}
+                download="Rasha_Althibyani_Data_Analysis_Portfolio.xlsx"
+                aria-label={`Download Excel workbook for ${project.title}`}
+                title="Download Excel Workbook"
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium text-[#8C79A8] bg-[#EAE5EF] hover:bg-[#8C79A8] hover:text-white transition-colors cursor-pointer"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Excel</span>
+              </a>
+            )}
+            {project.sqlFileUrl && (
+              <a
+                href={project.sqlFileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View SQL queries for ${project.title}`}
+                title="View SQL Queries"
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium text-[#8C79A8] bg-[#EAE5EF] hover:bg-[#8C79A8] hover:text-white transition-colors cursor-pointer"
+              >
+                <FileCode className="w-3.5 h-3.5" />
+                <span>SQL</span>
+              </a>
+            )}
             {project.videoUrl && (
               <button
                 type="button"

@@ -11,6 +11,8 @@ import {
   Play,
   Video,
   Download,
+  FileCode,
+  Database,
 } from 'lucide-react';
 import { Project } from '../../../types/portfolio';
 import { Modal } from '../../ui/Modal';
@@ -96,7 +98,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 icon={Github}
                 iconPosition="left"
               >
-                Source Code
+                View on GitHub
               </Button>
             )}
 
@@ -120,9 +122,22 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 size="sm"
                 icon={Download}
                 iconPosition="left"
-                download
+                download="Rasha_Althibyani_Data_Analysis_Portfolio.xlsx"
               >
                 Download Excel
+              </Button>
+            )}
+
+            {project.sqlFileUrl && (
+              <Button
+                href={project.sqlFileUrl}
+                target="_blank"
+                variant="secondary"
+                size="sm"
+                icon={FileCode}
+                iconPosition="left"
+              >
+                View SQL Queries
               </Button>
             )}
           </div>
@@ -197,6 +212,70 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             {project.problemAndObjectives}
           </p>
         </div>
+
+        {/* Dedicated SQL Analysis Section */}
+        {project.sqlFileUrl && (
+          <div className="space-y-3.5 p-4 sm:p-5 rounded-xl bg-[#FAF8FC] border border-[#E2DCea]">
+            <div className="flex flex-wrap items-center justify-between gap-2.5 border-b border-[#E2DCea] pb-3">
+              <h3 className="text-base font-bold text-[#282433] flex items-center gap-2">
+                <Database className="w-5 h-5 text-[#8C79A8]" />
+                SQL Data Analysis & Queries
+              </h3>
+              <Button
+                href={project.sqlFileUrl}
+                target="_blank"
+                variant="primary"
+                size="sm"
+                icon={FileCode}
+                iconPosition="left"
+              >
+                View SQL Queries
+              </Button>
+            </div>
+
+            <p className="text-xs sm:text-sm text-[#5E586E] leading-relaxed">
+              This analysis module features a structured T-SQL script (<span className="font-mono text-[#8C79A8]">SQLQuery1.sql</span>) engineered for an academic admissions and student performance database (<span className="font-mono text-[#282433]">AlRayan_Admissions_DB</span>).
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div className="p-3 bg-white rounded-lg border border-[#E2DCea]/80 space-y-1">
+                <h4 className="text-xs font-bold text-[#8C79A8] uppercase tracking-wider font-mono">
+                  Schema & Relational Keys
+                </h4>
+                <p className="text-xs text-[#5E586E] leading-relaxed">
+                  Configured primary and foreign key relationships linking <code className="text-[#282433] font-mono">student_performance</code>, <code className="text-[#282433] font-mono">Majors</code> (Medicine, Nursing, Pharmacy, Labs), and <code className="text-[#282433] font-mono">Enrollments</code>.
+                </p>
+              </div>
+
+              <div className="p-3 bg-white rounded-lg border border-[#E2DCea]/80 space-y-1">
+                <h4 className="text-xs font-bold text-[#8C79A8] uppercase tracking-wider font-mono">
+                  Conditional Grading (CASE Statement)
+                </h4>
+                <p className="text-xs text-[#5E586E] leading-relaxed">
+                  Mapped numerical final scores into academic evaluation tiers from High Distinction (<span dir="rtl">ممتاز مرتفع</span>) down to Fail (<span dir="rtl">راسب</span>).
+                </p>
+              </div>
+
+              <div className="p-3 bg-white rounded-lg border border-[#E2DCea]/80 space-y-1">
+                <h4 className="text-xs font-bold text-[#8C79A8] uppercase tracking-wider font-mono">
+                  Statistical Aggregation & Cohorts
+                </h4>
+                <p className="text-xs text-[#5E586E] leading-relaxed">
+                  Computed total student volume, grade averages, score extremes (<code className="text-[#282433] font-mono">MIN/MAX</code>), and attendance metrics across cohorts and gender groups.
+                </p>
+              </div>
+
+              <div className="p-3 bg-white rounded-lg border border-[#E2DCea]/80 space-y-1">
+                <h4 className="text-xs font-bold text-[#8C79A8] uppercase tracking-wider font-mono">
+                  Multi-Table Joins & Integrity Audits
+                </h4>
+                <p className="text-xs text-[#5E586E] leading-relaxed">
+                  Executed <code className="text-[#282433] font-mono">LEFT JOIN</code> queries for college enrollment totals, accompanied by range validation (<code className="text-[#282433] font-mono">0–100</code>) and <code className="text-[#282433] font-mono">NULL</code> data quality filters.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* 3. My Role & Key Contributions */}
         <div className="space-y-3">

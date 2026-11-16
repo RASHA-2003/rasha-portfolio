@@ -294,9 +294,9 @@ export const portfolioData: PortfolioData = {
 
     {
       id: 'project-data-analysis-excel',
-      title: 'Excel – Data Analysis Project',
+      title: 'Data Analysis – Excel & SQL',
       tagline:
-        'A practical data analysis project using Microsoft Excel to organize, analyze, and visualize data.',
+        'Practical data analysis using Microsoft Excel and SQL to clean, structure, query, and visualize dataset insights.',
       category: 'Data Analysis',
       featured: false,
       thumbnail: '/images/data-analysis.png',
@@ -304,25 +304,61 @@ export const portfolioData: PortfolioData = {
         {
           url: '/images/data-analysis.png',
           caption:
-            'Data Analysis Project – Excel analysis and data visualization.',
+            'Data Analysis Project – Excel analysis and relational SQL data exploration.',
         },
       ],
       overview:
-        'An Excel-based data analysis project demonstrating practical work with data organization, analysis, and visualization.',
+        'A comprehensive data analysis project combining spreadsheet analysis in Microsoft Excel with relational database querying in SQL. The project focuses on data organization, performance tracking, multi-table joins, conditional evaluations, and data quality validation.',
       problemAndObjectives:
-        'The project focuses on exploring and presenting data in a clear and structured way using Microsoft Excel.',
+        'Academic admissions and performance data require systematic cleaning, relational structuring, and analytical querying to extract actionable insights. The objective was to clean and present data in Excel, and author structured SQL scripts to evaluate student performance, analyze major enrollments, and enforce data integrity.',
       roleAndContributions: [
-        'Worked on the data analysis project using Microsoft Excel.',
+        'Excel Data Organization: Organized, analyzed, and visualized tabular datasets within Microsoft Excel.',
+        'Relational Schema Architecture: Defined primary and foreign key constraints linking student performance, academic majors, and semester enrollments.',
+        'Conditional Analysis & Grading: Authored SQL CASE queries categorizing student performance into structured evaluation tiers based on numerical scores.',
+        'Statistical Aggregation: Computed key dataset metrics including student count, average/highest/lowest grades, and attendance rates grouped across cohorts and demographics.',
+        'Relational Multi-Table Joins: Executed LEFT JOIN operations between majors and enrollments to evaluate distribution and enrollment volumes per academic college.',
+        'Data Validation & Quality Checks: Formulated range checks (0–100) and NULL identification queries to ensure data consistency and validity.',
       ],
-      technologies: ['Microsoft Excel'],
-      implementationProcess: [],
+      technologies: [
+        'Microsoft Excel',
+        'SQL (T-SQL)',
+        'Database Design',
+        'Relational Joins',
+        'Data Validation',
+      ],
+      implementationProcess: [
+        {
+          phase: 'Phase 1: Excel Data Processing & Visualization',
+          description:
+            'Structured, analyzed, and presented core datasets within the Microsoft Excel workbook.',
+        },
+        {
+          phase: 'Phase 2: Relational Schema Design & Table Constraints',
+          description:
+            'Configured student performance, majors, and enrollment tables with primary and foreign key constraints in AlRayan_Admissions_DB.',
+        },
+        {
+          phase: 'Phase 3: Analytical SQL Queries & Aggregations',
+          description:
+            'Authored queries for grade ranking, conditional tiering with CASE statements, demographic grouping, and enrollment distribution.',
+        },
+        {
+          phase: 'Phase 4: Data Validation & Quality Assurance',
+          description:
+            'Audited dataset integrity with boundary validation and NULL checks across student records.',
+        },
+      ],
       resultsAndImpact: [
-        'Excel workbook available for review and download.',
+        'Structured multi-table relational schema connecting student performance with academic majors and admissions records.',
+        'Automated performance classification and demographic statistical summaries using structured SQL queries.',
+        'Validated data integrity with range checks and missing value detection.',
+        'Full Excel workbook (.xlsx) and SQL analysis script (.sql) available for review and direct download.',
       ],
       githubUrl: undefined,
       liveDemoUrl: undefined,
       downloadUrl:
         '/files/Rasha_Althibyani_Data_Analysis_Portfolio.xlsx',
+      sqlFileUrl: '/files/SQLQuery1.sql',
     },
   ],
 
